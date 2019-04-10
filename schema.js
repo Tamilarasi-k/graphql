@@ -69,7 +69,7 @@ var rootquery = new GraphQLObjectType({
                 code: { type: GraphQLString }
             },
             resolve(parents, args) {
-                return vendor.findById(args.id);
+                return vendor.find(args.code);
             }
         }
     }
