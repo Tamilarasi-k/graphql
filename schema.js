@@ -197,6 +197,7 @@ var mutation = new GraphQLObjectType({
                 });
 
                 if(data != null){
+                    vr result = await Vendor.findOne({code:args.code})
                     console.log("data updated");
                     return data;
                 }
